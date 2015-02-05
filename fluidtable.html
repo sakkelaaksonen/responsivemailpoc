@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+ <style>
+
+body {margin: 0;}
+#main {
+  width: 100%;
+  margin:0 auto;
+  border: 2px solid red;
+  box-sizing:border-box;
+  padding:3rem;
+}
+
+ul.fluid-block { 
+  border: 1px solid blue;
+  box-sizing:border-box;
+  background: #fafafa; 
+  width:100%;
+  float:left;
+  display: block;
+  padding: 1rem;
+}
+
+
+ul.fluid-block > li {
+  padding: 0;
+  margin: 0 0 2rem 0;
+  width:100%;
+  float:left;
+  display: block;
+  text-align: justify;
+
+}
+
+/*silly syntax for silly render engines*/
+table[class="main"] {
+  width:100%;
+}
+
+table[class="column"] {
+  width: 100%;
+  margin: 0 2rem 2rem 0;
+  float:left;
+}
+
+table[class="column"] td {text-align: justify;}
+
+@media screen and (max-width:640px) {
+    ul ,ol {
+      width: 100%;
+      clear:both;
+    }
+
+  table[class="column"] {
+    width: 100%;
+  }  
+}
+
+@media screen and (min-width:641px) {
+  ul.fluid-block li {
+    width: calc(33% - 2rem );
+    margin:0 2rem 2rem 0;
+  }
+  
+  table[class="column"] {
+    width: calc(32% - 2rem);
+    margin: 0 2rem 2rem 0;
+    float:left;
+  }
+}
+  </style>
+</head>
+<body>
+<a href="javascript:window.outerWidth=320;">320</a><a href=""></a>
+<br> 
+<h1>Div and list approach</h1>
+  <div id="main">
+    <ul class="fluid-block">
+      <li> singularity shoes modem gang shrine digital convenience store tube silent sprawl fluidity cartel narrative skyscraper engine -ware savant advert towards otaku meta- stimulate sign cardboard hotdog shanty town camera -space grenade apophenia franchise rain carbon tiger-team Kowloon knife decay construct nano- tower Chiba tanto semiotics military-grade systema lights human sensory vinyl futurity courier paranoid dolphin RAF sunglasses plastic physical fetishism katana augmented reality man assault range-rover dead spook neural monofilament disposable wristwatch girl denim ablative</li>
+      <li>soul-delay corporation vinyl alcohol media rebar RAF Tokyo boy augmented reality saturation point order-flow wonton soup post- cartel rifle voodoo god futurity semiotics construct sign pistol human hacker receding woman Kowloon concrete spook garage meta- sentient -space drugs cardboard bomb corrupted knife katana into tank-traps assassin carbon crypto- range-rover paranoid tiger-team rain apophenia beef noodles modem Shibuya DIY marketing table hotdog jeans disposable refrigerator artisanal decay uplink plastic physical office San Francisco digital faded realism Legba ablative face forwards</li>
+      <li>skyscraper human monofilament nodal point stimulate otaku pre- wristwatch realism towards receding neural table savant refrigerator spook nodality geodesic vinyl cardboard shoes plastic sentient computer courier car order-flow tank-traps industrial grade crypto- tattoo media Tokyo ablative free-market into kanji warehouse rifle denim market sign lights apophenia advert concrete San Francisco long-chain hydrocarbons drugs artisanal girl post- chrome range-rover nano- drone gang convenience store youtube sub-orbital shanty town j-pop render-farm footage euro-pop garage camera city cyber- uplink hotdog smart-</li>
+    </ul>
+  
+  <br style="clear:both;">  
+    <a href=""><span>Link to a page</span> with more info</a> 
+    <br>
+    <a href=""><span>Click here for more spam</span></a>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  
+  <h1>Fluid Table approach</h1>
+  <table class="main">
+    <tr>
+      <td>
+        <table class="column">
+          <tr>
+            <td>
+              
+range-rover franchise apophenia boat Kowloon Chiba singularity savant neural tanto j-pop wristwatch film boy hotdog soul-delay systemic -ware face forwards rebar receding DIY weathered market nodal point courier vinyl render-farm warehouse wonton soup military-grade rain fetishism digital assassin woman order-flow physical neon tube cyber- realism semiotics industrial grade stimulate cardboard network narrative ablative long-chain hydrocarbons artisanal geodesic rifle math- drugs girl claymore mine fluidity youtube BASE jump dead bridge tattoo marketing katana plastic post- concrete tiger-team Legba denim dolphin
+
+            </td>
+          </tr>
+        </table>
+        <table class="column">
+          <tr>
+            <td>
+              sign human shanty town plastic city semiotics marketing physical Tokyo towards camera cartel euro-pop rebar carbon industrial grade tube tanto rifle hotdog decay table pre- saturation point render-farm neural urban military-grade cardboard artisanal fluidity assassin monofilament neon sensory j-pop San Francisco silent modem tower disposable computer sprawl fetishism kanji into gang RAF voodoo god beef noodles dolphin Kowloon face forwards jeans apophenia corporation geodesic digital pen BASE jump engine spook dome drone bicycle nodal point claymore mine math- hacker -space tiger-team chrome
+
+            </td>
+          </tr>
+        </table>
+        <table class="column">
+          <tr>
+            <td>
+              
+nano- monofilament hacker boat Legba free-market motion tank-traps human towards RAF shoes rifle warehouse sprawl weathered meta- vehicle long-chain hydrocarbons -space claymore mine knife euro-pop vinyl systemic render-farm network j-pop fetishism into spook sign receding wristwatch man neural modem otaku garage savant alcohol rebar camera cyber- assassin tiger-team systema urban bicycle tube sunglasses convenience store military-grade futurity kanji range-rover skyscraper rain refrigerator office tattoo face forwards tanto fluidity lights San Francisco concrete DIY disposable Tokyo order-flow advert
+
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
