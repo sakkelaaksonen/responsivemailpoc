@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Fluid Tables test</title>
+    <style>
+    body {margin: 0;}
+    /*silly syntax for silly render engines*/
+    table[class="main"] {width:100%;}
+    table[class="column"] {
+    width: 100%;
+    margin: 0 2rem 2rem 0;
+    float:left;
+    }
+    table[class="column"] td {text-align: justify;}
+    @media screen and (max-width:580px) {
+    table[class="column"] { width: 100%;}
+    }
+    @media screen and (min-width:581px) {
+    table[class="column"] {
+    /*first a failsafe width for calc*/
+    width: 30%;
+    width: calc(32% - 2rem);
+    margin: 0 2rem 2rem 0;
+    float:left;
+    }
+    }
+    </style>
+  </head>
+  <body>
+    <table class="main">
+      <tr>
+        <td>
+          <table class="column">
+            <tr>
+              <td>
+                <font style="font-weight: bold; font-size: 1.2rem; line-height: 1.4rem;">
+                Fluid tables: should be three full width blocks in viewports smaller than 581px and 
+                three equally sized columns in larger viewports.
+                </font>
+                <br>
+                <br>
+                
+                range-rover franchise apophenia boat Kowloon Chiba singularity savant neural tanto j-pop wristwatch film boy hotdog soul-delay systemic -ware face forwards rebar receding DIY weathered market nodal point courier vinyl render-farm warehouse wonton soup military-grade rain fetishism digital assassin woman order-flow physical neon tube cyber- realism semiotics industrial grade stimulate cardboard network narrative ablative long-chain hydrocarbons artisanal geodesic rifle math-  girl claymore mine fluidity youtube BASE jump dead bridge tattoo marketing katana plastic post- concrete tiger-team Legba denim dolphin
+              </td>
+            </tr>
+          </table>
+          <table class="column">
+            <tr>
+              <td>
+                sign human shanty town plastic city semiotics marketing physical Tokyo towards camera cartel euro-pop rebar carbon industrial grade tube tanto rifle hotdog decay table pre- saturation point render-farm neural urban military-grade cardboard artisanal fluidity assassin monofilament neon sensory j-pop San Francisco silent modem tower disposable computer sprawl fetishism kanji into gang RAF voodoo god beef noodles dolphin Kowloon face forwards jeans apophenia corporation geodesic digital pen BASE jump engine spook dome drone bicycle nodal point claymore mine math- hacker -space tiger-team chrome
+              </td>
+            </tr>
+          </table>
+          <table class="column">
+            <tr>
+              <td>
+                
+                nano- monofilament hacker boat Legba free-market motion tank-traps human towards RAF shoes rifle warehouse sprawl weathered meta- vehicle long-chain hydrocarbons -space claymore mine knife euro-pop vinyl systemic render-farm network j-pop fetishism into spook sign receding wristwatch man neural modem otaku garage savant alcohol rebar camera cyber- assassin tiger-team systema urban bicycle tube sunglasses convenience store military-grade futurity kanji range-rover skyscraper rain refrigerator office tattoo face forwards tanto fluidity lights San Francisco concrete DIY disposable Tokyo order-flow advert
+               
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+           
+                <br />
+                %%Member_Busname%% <br />
+                %%Member_Addr%% <br />
+                %%Member_PostalCode%% %%Member_City%%, %%Member_Country%%
+                <custom name="opencounter" type="tracking">
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
