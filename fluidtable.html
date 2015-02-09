@@ -2,8 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Document</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Fluid tables email template</title>
  <style>
+/*testing wether viewport settings have any effect in email rendering. 
+*/
+
+@viewport{
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+
+
+@-ms-viewport{
+  width: extend-to-zoom;
+  zoom: 1.0;
+}
 
 body {margin: 0;}
 #main {
@@ -50,12 +64,12 @@ table[class="column"] td {text-align: justify;}
 
 @media screen and (max-width:640px) {
     ul ,ol {
-      width: 100%;
+      width: 100% !important;
       clear:both;
     }
 
   table[class="column"] {
-    width: 100%;
+    width: 100% !important;
   }  
 }
 
@@ -99,7 +113,7 @@ table[class="column"] td {text-align: justify;}
   <table class="main">
     <tr>
       <td>
-        <table class="column">
+        <table class="column" width="32%">
           <tr>
             <td>
               
@@ -108,7 +122,7 @@ range-rover franchise apophenia boat Kowloon Chiba singularity savant neural tan
             </td>
           </tr>
         </table>
-        <table class="column">
+        <table class="column" width="32%">
           <tr>
             <td>
               sign human shanty town plastic city semiotics marketing physical Tokyo towards camera cartel euro-pop rebar carbon industrial grade tube tanto rifle hotdog decay table pre- saturation point render-farm neural urban military-grade cardboard artisanal fluidity assassin monofilament neon sensory j-pop San Francisco silent modem tower disposable computer sprawl fetishism kanji into gang RAF voodoo god beef noodles dolphin Kowloon face forwards jeans apophenia corporation geodesic digital pen BASE jump engine spook dome drone bicycle nodal point claymore mine math- hacker -space tiger-team chrome
@@ -116,7 +130,7 @@ range-rover franchise apophenia boat Kowloon Chiba singularity savant neural tan
             </td>
           </tr>
         </table>
-        <table class="column">
+        <table class="column" width="32%">
           <tr>
             <td>
               
