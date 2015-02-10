@@ -26,9 +26,9 @@ class MailerApp < Sinatra::Application
   before '/' do
     #Set template instance vars.
     #True by default. Add ! to revert
-    @edge = (params[:edge].nil?)
-    @use_device_width = (params[:use_device_width].nil?)
-    @media_queries = (params[:media_queries].nil?)
+    @edge = (params[:e].nil?)
+    @use_device_width = (params[:dw].nil?)
+    @media_queries = (params[:mq].nil?)
     @svg = (params[:svg].nil?)
 
   end
