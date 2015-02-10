@@ -1,0 +1,32 @@
+<% if @media_queries %>
+<style>
+@media screen and (max-width:640px) {
+  table[class="column column1"],
+  table[class="column column2"] {
+    width: 100% !important;
+  }
+}
+@media screen and (min-width:640px) {
+  table[class="column column2"] {
+    /* first a failsafe width for calc */
+    width: 48% !important;
+    width: calc(49% - 0.5em) !important;
+    margin: 0 1rem 2rem 0 !important;
+    float: left;
+    box-sizing: border-box;
+  }
+  table[class="column column2"] +
+  table[class="column column2"] {
+    /* first a failsafe width for calc */
+        
+    width: 50%;
+    margin: 0 0rem 2em 0 !important;
+    float: left;
+    box-sizing: border-box;
+  }
+  table[class="column"] td {
+    text-align: left;
+  }
+}
+</style>
+<% end %>

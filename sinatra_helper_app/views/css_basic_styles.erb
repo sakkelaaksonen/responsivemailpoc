@@ -1,0 +1,58 @@
+body {
+  margin: 0.5em 1em;
+  color: #333;
+  font-size: 20px;
+  line-height: 28px;
+  font-family: wf_segoe_ui, Tahoma, Arial, sans-serif;
+  background: #f2f2f2;
+  font-weight: 300;
+}
+td {
+  padding: 0 !important;
+}
+svg {
+  max-width: 400px !important;
+  text-align: left;
+}
+
+/* silly syntax for silly render engines */
+table[class="main"] {
+  width: 100% !important;
+}
+table[class="column column1"], table[class="column column2"] {
+  width: 100% !important;
+  margin: 0 2rem 2rem 0 !important;
+  float: left;
+}
+td p {
+  text-align: justify;
+}
+p.heading1 {
+  font-weight: 300;
+  font-size: 2.5em;
+  line-height: 1.1em;
+  letter-spacing: -0.03em;
+  text-align: left;
+  padding: 0.5em;
+}
+td.textblock, p.textblock, span.textblock {
+  background: white;
+  padding: 1em !important;
+}
+.highlight {
+  background: #1570a6;
+  color: white;
+  padding: 1rem;
+  font-size: 32px;
+  line-height: 38px;
+}
+.noticebox {
+  /* gray-light */
+  background: #d2d2d2;
+}
+a {
+  color: #1570a6 !important;
+}
+.column2 + .column1 {
+  clear: both;
+}
