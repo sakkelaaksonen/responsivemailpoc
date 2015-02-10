@@ -19,14 +19,20 @@ svg {
   text-align:left;
 }
 
-@media screen and (max-width:640px) {
+@media screen and (max-width:<%=(@large_view-1)%>px) {
   table[class="column column1"],
   table[class="column column2"] {
     width: 100% !important;
   }
 }
-@media screen and (min-width:640px) {
-  table[class="column column2"] {
+@media screen and (min-width:<%=@large_view%>px) {
+  body {max-width:920px; margin: 0 auto !important;}
+
+  table[class="column column2"],
+  table[class="column column2 image-column-text"],
+  table[class="column column2 image-column-image"]
+   {
+    display:block !important;
     /* first a failsafe width for calc */
     width: 48% !important;
     width: calc(50% - 1em) !important;
@@ -45,6 +51,13 @@ svg {
   }
   table[class="column"] td {
     text-align: left;
+  }
+  
+  table[class="column column2 image-column-image"] td {
+   width: 100%;
+  }
+  table[class="column column2 image-column-image"] img {
+    width: 100%;
   }
 }
 </style>

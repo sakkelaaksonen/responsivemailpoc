@@ -14,29 +14,35 @@ class MailerApp < Sinatra::Application
 
   helpers do
     #Pun intended
-    def premaul(filename)
-    Premailer.new(
-      File.open(filename),
-      # erb( :styleguide_layout),
-      {with_html_string: true}
+
+    def set_view_params
+      @large_view = 640
+      @edge = (params[:e].nil?)
+      @use_device_width = (params[:dw].nil?)
+      @media_queries = (params[:mq].nil?)
+      @svg = (params[:svg].nil?)
+    end
+
+    def premaul(html)
+      Premailer.new(
+        html, {with_html_string: true}
       ).to_inline_css
     end
 
   end
-  before '/' do
-    #Set template instance vars.
-    #True by default. Add ! to revert
-    @edge = (params[:e].nil?)
-    @use_device_width = (params[:dw].nil?)
-    @media_queries = (params[:mq].nil?)
-    @svg = (params[:svg].nil?)
 
-  end
+  before '/' do
+    set_view_params
+   end
 
   get '/' do
-    erb( 
-      premaul("#{settings.views}/styleguide_layout.erb")
-      )
+
+    inlined_html = premaul(erb( :premailer_payload))
+    
+    
+    erb(inlined_html,{
+      layout: :styleguide_layout
+      })    
   end
 
   # after '/' do
