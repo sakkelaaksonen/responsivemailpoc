@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fluid Tables test</title>
+    <meta charset="UTF-8">
+    <!-- Two layered template rendering: styles in here are
+    used by premailer and are inlined to each effected element
+    Media queries are added afterwards with erb rendering
+    -->
+    <%= erb :ie_viewport_meta %>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+  
+    
+    <!-- /*must be in separate style tag or premailer mauls it away*/ -->
+    <%= erb :css_mediaqueries %>
+    <%= erb :css_ie_viewport %>
+  </head>
+ <%= yield %>
+</html>

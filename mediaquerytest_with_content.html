@@ -1,16 +1,18 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml">
 <head>
+<!--
+Using this meta prevents Quirks mode for IE 10 engines 
+Leaving it out results in smaller viewport, which is sometimes desirable.
+-->
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 <meta name="format-detection" content="telephone=no" />
 <title>Mobile Detection Properties Test</title>
 <style type="text/css">
 
-/*Scema:
+/*Layout system:
 
 .fallback contains the oldschool fixed table layout.
 it will be hidden with media queries
@@ -21,6 +23,20 @@ it will be hidden with media queries
 it is hidden by default and made visible via media query
 
 */
+
+/*testing wether viewport settings have any effect in email rendering. 
+*/
+
+@viewport{
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+
+
+@-ms-viewport{
+  width: extend-to-zoom;
+  zoom: 1.0;
+}
 
 
 /* Footer styles */

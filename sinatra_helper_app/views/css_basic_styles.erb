@@ -1,0 +1,71 @@
+<!-- foo -->
+  <style>
+    /*Use !important to override inline styles*/
+    /*these styles are used for inlining.*/
+    body {
+    margin: 0.5em 1em;
+    color:#333;
+    font-size:20px;
+    line-height: 28px;
+    font-family: wf_segoe_ui, Tahoma, Arial, sans-serif;
+    background:#f2f2f2;
+    font-weight: 300;
+    }
+
+    body.bg {
+      background:#f2f2f2;
+    }
+    
+    td {
+    padding:0 !important;
+    text-align:left;
+    vertical-align: top;
+    }
+    
+    /*
+    moved to meqia queries
+    svg {max-width:400px !important;
+    text-align:left;
+    }*/
+    /*silly syntax for silly render engines*/
+    table.main {width:100% }
+    
+    table.column,
+    table.column2,
+    table.column1,
+    table.image-column-text,
+    {
+    width: 100% ;
+    margin: 0 2rem 2rem 0 ;
+    float:left;
+    }
+    table.image-column-image {
+    display:none;
+    }
+    td p {text-align: justify;}
+    p.heading1 {font-weight: 300; font-size:2.5em; line-height: 1.1em; letter-spacing:-0.03em;text-align: left; padding:0.5em;}
+    
+    td.textblock,p.textblock, span.textblock {
+    background:white;
+    padding:1em !important;
+    }
+    .highlight {
+    background:#1570a6;
+    color:white;
+    padding:1.5em 1em;
+    font-size:32px;
+    line-height: 38px;
+    font-weight: bold;
+    }
+    .noticebox {
+    /*gray-light*/
+    background:#d2d2d2;
+    }
+    
+    a , a span {color:#1570a6;}
+    .column2 + .column1 {
+    clear:both;
+    }
+    
+    
+    </style>
