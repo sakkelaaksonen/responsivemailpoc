@@ -1,39 +1,95 @@
-<% if @media_queries %>
+<% if @media_queries
+
+@small_view ||= 320
+@medium_view ||= 480
+@large_view ||= 640
+
+%>
 <style>
-/*Target widths:
+/* Target widths:320px => portrait for all
 
-320px => portrait for all
+480-492 => Lumia Landscape and small low end androids
 
-480-492 => Lumia Landscape
-
-~580 => Android landscape
+~580 => Android landscape and similar highend devices
 
 Using edge meta and viewport meta|(-ms-)viewport {
-  zoom:1; width:extend-to-zoom;
-} causes ~IE10 renderers to emulate larger screens,
-thus showing two columns in landscape
-
-*/
+  zoom: 1;
+  width: extend-to-zoom;
+}
+causes ~IE10 renderers to emulate larger screens,
+thus showing two columns in landscape */
 svg {
-  max-width:400px !important;
-  text-align:left;
+  max-width: 400px !important;
+  text-align: left;
 }
 
+/* Portraid mobile view */
+@media screen and (max-width:<%=(@small_view)%>px) {
+  table[class="column column2 image-column-image"],
+  table.image-column-image a img {
+
+  }
+  
+  /* table[class="column column2 image-column-image"],
+  table[class="column column2 image-column-image"] td,
+  table[class="column column2 image-column-image"] td img,
+  table.image-column-image td,
+  table.image-column-image a,
+  table.image-column-image a img {
+    height: 150px !important;
+    margin: 0;
+    padding: 0;
+  }
+  */
+  table.image-column-image a,
+  table.image-column-image a img {
+    
+  }
+}
+
+/* medium mobile landscape and below */
+@media screen and (max-width:<%=(@medium_view)%>px) {
+}
+
+/* Common styles for all mobile landscape sizes (below 640) */
 @media screen and (max-width:<%=(@large_view-1)%>px) {
-  table[class="column column1"],
+  /* table[class="column column1"],
   table[class="column column2"] {
     width: 100% !important;
   }
+  */
 }
+
+/* Large view */
 @media screen and (min-width:<%=@large_view%>px) {
-  body {max-width:920px; margin: 0 auto !important;}
+  body {
+    max-width: 920px;
+    margin: 0 auto !important;
+/*Large fonts for large viewports*/
+    font-size: 20px !important;
+    line-height: 28px !important;
+  }
+
+
+table[class="column column2 image-column-image"] td ,
+  table.image-column-image td {
+    width: 50% !important;
+  }
+
+  table[class="column column2 image-column-image"] td img,
+  table.image-column-image td img {
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+  }
+
+
+  .overflower img {display: block !important;}
 
   table[class="column column2"],
   table[class="column column2 image-column-text"],
-  table[class="column column2 image-column-image"]
-   {
-    display:block !important;
-    /* first a failsafe width for calc */
+  table[class="column column2 image-column-image"] {
+    display: block !important; /* first a failsafe width for calc */
     width: 48% !important;
     width: calc(50% - 1em) !important;
     margin: 0 1rem 2rem 0 !important;
@@ -42,8 +98,6 @@ svg {
   }
   table[class="column column2"] +
   table[class="column column2"] {
-    /* first a failsafe width for calc */
-        
     width: calc(50% - 1rem);
     margin: 0 0rem 2em 1rem !important;
     float: left;
@@ -52,13 +106,24 @@ svg {
   table[class="column"] td {
     text-align: left;
   }
-  
   table[class="column column2 image-column-image"] td {
-   width: 100%;
+    width: 100%;
   }
   table[class="column column2 image-column-image"] img {
     width: 100%;
   }
+
+  /*Large fonts for large views*/
+  p.heading1 {
+    font-weight: 300;
+    font-size: 2.5em;
+    line-height: 1.1em;
+    letter-spacing: -0.03em;
+    text-align: left;
+    padding: 0.5em;
+  }
+
+
 }
 </style>
 <% end %>
