@@ -15,3 +15,12 @@ mobile email clients
 >> path/to/repo/$ bundle install
 
 >> path/to/repo/$ shotgut
+
+
+== EMAIL STYLE BASICS ==
+
+By Current styles @ MS.co
+mmaibody -> small text -> 0.75em ~ 15px
+basic heading -> medium text -> 1.26em ~25px
+
+Test cases: Small images
