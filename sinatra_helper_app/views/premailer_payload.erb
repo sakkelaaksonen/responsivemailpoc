@@ -1,16 +1,9 @@
  <body>
  <%= erb :css_basic_styles %>
     <div class="bg">
-      
-      <table width="100%" style="margin:0 0 2em 0; border-bottom:3px solid #ccc;">
-        <tr>
-          <td>
-            <% if @svg %>
-            <%= erb :ms_logo_svg %>
-            <% end %>
-          </td>
-        </tr>
-      </table>
+                 <%= erb :header %>
+
+
       <table class="main" width="100%">
         <tr>
           <td>
@@ -18,10 +11,9 @@
             <table>
               <tr>
                 <td style="padding:0">   <p class="highlight">
-                  <span>  Fluid tables: </span>
+                  <span>  Punchline: small amount of text.</span>
                   
-                  <span>should be three full width blocks in viewports smaller than 581px and
-                  two equally sized columns and one full block for larger viewports that also support media queries and floats</span>
+                  <span class="enhancedContent">Enhanced content may show more stuff after initial content.</span>
                   
                   </p>
                 </td>
