@@ -1,57 +1,70 @@
- <body>
- <%= erb :css_basic_styles %>
-    <div class="bg">
-                 <%= erb :header %>
+<body>
+  <%= erb :css_basic_styles %>
+  <div class="bg">
+    <div class="preheader" style="font-size: 1px; display: none !important;">PREHEADER CODE HERE</div>
+    <%= erb :header %>
+    <table class="main" width="100%">
+      <tr>
+        <td>
+          <table width="100%">
+            <tr>
+              <td style="padding:0">   <p class="highlight">
+                <span>  Punchline: small amount of text.</span>
+                <span class="enhancedContent">Enhanced content may show more stuff after initial content.</span>
+                </p>
+              </td>
+            </tr>
+          </table>
+          
+          
+        </td>
+      </tr>
+<tr>
+  <td>
+    
+           <%= 
+           # erb :image_column_small 
+           %>
 
 
-      <table class="main" width="100%">
-        <tr>
-          <td>
+  </td>
+</tr>
 
-            <table>
-              <tr>
-                <td style="padding:0">   <p class="highlight">
-                  <span>  Punchline: small amount of text.</span>
-                  
-                  <span class="enhancedContent">Enhanced content may show more stuff after initial content.</span>
-                  
-                  </p>
-                </td>
-              </tr>
-            </table>
 
-            
-            
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <%= erb :two_and_one_column %>
-            <%= erb :image_column %>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <%= 
-            # erb :gamegrid 
-            %>
-          </td>
-        </tr>
-      </table>
-      <table>
-        <tr>
-          <td>
-            
-            <p>
-            <br />
-            %%Member_Busname%% <br />
-            %%Member_Addr%% <br />
-            %%Member_PostalCode%% %%Member_City%%, %%Member_Country%%
-            <custom name="opencounter" type="tracking">
-            </p>
-          </td>
-        </tr>
-      </table> 
-      <!-- end of #main table -->
-    </div>
-  </body>
+      <tr>
+        <td>
+          <%= erb :two_and_one_column %>
+        </td>
+      </tr>
+      <tr>
+  <td>
+    
+          <%= erb :image_column %>
+
+
+  </td>
+</tr>
+
+
+      <tr>
+        <td>
+          <%=
+           erb :three_small_boxes
+          %>
+          <%=
+          # erb :three_small_boxes
+          %>
+        </td>
+      </tr>
+    </table>
+    <table width="100%">
+      <tr>
+        <td>
+          
+          <%= erb :footer %>
+        </td>
+      </tr>
+    </table>
+    <!-- end of #main table -->
+  </div>
+</body>
