@@ -2,8 +2,16 @@
   <%= erb :css_basic_styles %>
   <div class="bg">
     <div class="preheader" style="font-size: 1px; display: none !important;">PREHEADER CODE HERE</div>
-    <%= erb :header %>
+    
     <table class="main" width="100%">
+      <tr>
+        <td>
+          <%= erb :header %>
+        </td>
+      </tr>
+      <tr>
+        <td class="spacer"></td>
+      </tr>
       <tr>
         <td>
           
@@ -38,17 +46,17 @@
           
         </td>
       </tr>
-      <tr>
+      <!--    <tr>
         <td class="spacer"></td>
       </tr>
       <tr>
         <td>
           
           <%=
-          erb :image_column_small
+          #          erb :image_column_small
           %>
         </td>
-      </tr>
+      </tr> -->
       <tr>
         <td class="spacer"></td>
       </tr>
@@ -57,20 +65,19 @@
           <%= erb :two_and_one_column %>
         </td>
       </tr>
-
-<!--
+      <!--
       <tr>
         <td class="spacer"></td>
       </tr>
-       <tr>
+      <tr>
         <td>
           
-          <%= 
-          # erb :image_column 
+          <%=
+          # erb :image_column
           %>
         </td>
-      </tr> 
--->
+      </tr>
+      -->
       <tr>
         <td class="spacer"></td>
       </tr>
