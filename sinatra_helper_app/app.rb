@@ -11,7 +11,10 @@ class MailerApp < Sinatra::Application
 
     def set_view_params
       @edge = (params[:e].nil?)
-      @use_device_width = (params[:dw].nil?)
+      #device width triggers zoom in outlook mobile view.
+      @use_device_width = false
+
+      # @use_device_width = (params[:dw].nil?)
       @media_queries = (params[:mq].nil?)
       @svg = (params[:svg].nil?)
     end
