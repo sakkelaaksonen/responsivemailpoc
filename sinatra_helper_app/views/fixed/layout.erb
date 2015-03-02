@@ -2,14 +2,9 @@
 <html lang="en">
   <head>
     <title>Microsoft Newsletter : Fixed narrow width</title>
-    <meta charset="UTF-8">
-    <!-- Two layered template rendering: styles in here are
-    used by premailer and are inlined to each effected element
-    Media queries are added afterwards with erb rendering
-    -->
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-   <!-- /*must be in separate style tag or premailer mauls it away*/ -->
+    <%= erb :'content/css_ie_viewport' %>
+    <%= erb :'content/320_fixed_viewport_meta' %>
   </head>
  <%= yield %>
 </html>

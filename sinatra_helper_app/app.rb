@@ -4,7 +4,7 @@ require 'premailer'
 class MailerApp < Sinatra::Application
 
   WIDTHS = {
-    narrow: 296,
+    narrow: 298,
     medium: 456,
     wide: 608
   }
@@ -47,6 +47,10 @@ class MailerApp < Sinatra::Application
       ).to_inline_css
     end
 
+    def post_maul(main_template, view_path)
+       erb(premaul(erb( main_template.to_sym,{views: view_path})))
+    end
+
   end
 
 #
@@ -82,9 +86,15 @@ class MailerApp < Sinatra::Application
   end
 
   get '/fixed/narrow' do
-    @outerwidth = 320
-    @innerwidth = 296
-    erb(premaul(erb( :fixed_narrow_body,{views: "#{settings.views}/fixed"})))
+    @edge = true
+    @use_device_width = true
+    @outerwidth = 306
+    @innerwidth = 298 # outer - 8 for spacing
+    @zoomlevel = '1.1'
+    post_maul(:fixed_narrow_body,"#{settings.views}/fixed")
+
+        # erb(premaul(erb( :fixed_narrow_body,{views: "#{settings.views}/fixed"})))
+
   end
 
   get '/fluid/:width' do

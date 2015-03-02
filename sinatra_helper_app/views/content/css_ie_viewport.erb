@@ -1,13 +1,16 @@
 <% if @use_device_width %>
+<%
+@zoomlevel ||= '1.0'
+%>
 <style>
 @viewport{
-  zoom: 1.0;
+  zoom: <%= @zoomlevel %>;
   width: extend-to-zoom;
 }
 
 @-ms-viewport{
   width: extend-to-zoom;
-  zoom: 1.0;
+  zoom: <%= @zoomlevel %>
 }
 </style>
 <% end %>

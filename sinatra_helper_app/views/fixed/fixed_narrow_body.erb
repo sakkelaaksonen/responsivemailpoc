@@ -1,89 +1,31 @@
 <body>
-  <style>
-  html {
-  /*    width:<%=@outerwidth%>px;*/
-  background: #f2f2f2;
-  }
-  
-  body {
-  /*    max-width:<%=@innerwidth%>px;*/
-  margin:0 auto;background: #f2f2f2;
-  max-width:<%=@outerwidth%>px;
-  color: #333;
-  font-size: 14px;
-  line-height: 20px@b  font-family: wf_segoe_ui, Tahoma, Arial, sans-serif;
-  background: #f2f2f2;
-  font-weight: 300;
-  }
-  
-  
-  table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  margin:0; padding:0;
-  }
-  td {margin:0; padding:0; border:0;}
-  
-  table.main > tr > td  {
-  background: #fff;
-  margin:0 auto;
-  }
-  img { display: block; border:0;}
-  .bg {padding:4px;  background: #f2f2f2;}
-  .bg-white {background:white;}
-  a, a span {
-  color: #1570a6;
-  }
-  td.spacer {
-  height:20px;
-  background: #f2f2f2;
-  }
-  td.spacer-white {
-  height:20px;
-  background: #fff;
-  }
-  td.left-spacer,
-  td.right-spacer {
-  width:8px;
-  }
-  p.highlight {
-  background: #1570a6;
-  color: white;
-  padding: 1.5em 1em;
-  font-size:20px;
-  line-height:1.1em ;
-  text-align: left;
-  margin:0;
-  /*font-weight: bold;*/
-  }
-  #footer {}
-  .icon-list li {
-  padding:0;
-  margin:0;
-  list-style:none;
-  }
-  .icon-list li a { text-decoration: none;}
-  </style>
+  <%= erb :"#{@local_views}/basic_styles"%>
   
   <div class="bg">
     <div class="preheader" style="font-size: 1px; display: none !important;">PREHEADER CODE HERE</div>
-    <a href="%%view_email_url%%" alias="WebCopy">If you have problems viewing this email, check out even more awesome web version</a>
-    <table class="main" width="100%">
-      <tr>
-        <%= render_block( :header) %>
-      </tr>
-      <tr>
-        <%= render_block( :highlight,'content') %>
-      </tr>
-      <tr>
-        <%= render_block( :gamegrid_320,'content') %>
-      </tr>
-      <tr>
-        <%= erb :'content/block_spacer'%>
-      </tr>
-      <tr>
-        <%= render_block( :footer) %>
-      </tr>
+    <p>
+      <a href="%%view_email_url%%" alias="WebCopy">If you have problems viewing this email, <br> see the browser version.</a>
+    </p>
+    <table class="main" width="<%=@outerwidth%>px">
+      <tbody>
+        <tr>
+          <%= render_block( :header) %>
+        </tr>
+        <tr>
+          <%= render_block( :highlight,'content') %>
+        </tr>
+        <tr>
+          <%=
+          render_block( :gamegrid_320,'content') 
+          %>
+        </tr>
+        <tr>
+          <%= erb :'content/block_spacer'%>
+        </tr>
+            <tr>
+          <%= render_block( :footer_pile) %>
+        </tr>
+      </tbody>
     </table>
     <!-- end of #main table -->
   </div>
