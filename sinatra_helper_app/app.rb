@@ -20,6 +20,10 @@ class MailerApp < Sinatra::Application
 
   helpers do
 
+    def render_block(block_name,local_views=@local_views)
+      erb( :'/content/spaced_row', { locals: {block: "#{local_views}/#{block_name}"} } )
+    end
+
     def get_width(keysym)
       keysym = keysym.to_sym unless keysym.is_a? Symbol  # just in case
       return WIDTHS[keysym]
@@ -50,15 +54,19 @@ class MailerApp < Sinatra::Application
     before '/fixed/*' do
       @flex = false
       use_get_params
+      @local_views = "fixed"
+      # @local_views = "#{settings.views}/fixed"
+
     end
 
    before '/fluid/*' do
       @flex = true
       use_get_params
+      @local_views = "fluid"
     end
 
-  before '/fixed/:width' do
-    @bodywidth = get_width(params[:width])
+  before '/fixed/narrow' do
+
   end
 
   before 'fluid/:width' do
@@ -73,10 +81,10 @@ class MailerApp < Sinatra::Application
     erb :index
   end
 
-  get '/fixed/:width' do
-    erb(premaul(erb( :premailer_payload)),{
-        layout: :styleguide_layout
-    })
+  get '/fixed/narrow' do
+    @outerwidth = 320
+    @innerwidth = 296
+    erb(premaul(erb( :fixed_narrow_body,{views: "#{settings.views}/fixed"})))
   end
 
   get '/fluid/:width' do
