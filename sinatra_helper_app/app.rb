@@ -3,13 +3,29 @@ require 'premailer'
 
 class MailerApp < Sinatra::Application
 
+  WIDTHS = {
+    narrow: 296,
+    medium: 456,
+    wide: 608
+  }
+  
+
+  @small_view = WIDTHS[:narrow]
+  @medium_view = 456
+  @large_view = 608
+
   configure do
     set :root , File.dirname( __FILE__)
   end
 
   helpers do
 
-    def set_view_params
+    def get_width(keysym)
+      keysym = keysym.to_sym unless keysym.is_a? Symbol  # just in case
+      return WIDTHS[keysym]
+    end
+
+    def use_get_params
       @edge = (params[:e].nil?)
       #device width triggers zoom in outlook mobile view.
       @use_device_width = false
@@ -17,6 +33,7 @@ class MailerApp < Sinatra::Application
       # @use_device_width = (params[:dw].nil?)
       @media_queries = (params[:mq].nil?)
       @svg = (params[:svg].nil?)
+
     end
 
     def premaul(html)
@@ -30,11 +47,22 @@ class MailerApp < Sinatra::Application
 
 #
 #FILTERS
-#
-  before '/' do
-    # read query params
-    # for using enhanhed styles
-    set_view_params
+    before '/fixed/*' do
+      @flex = false
+      use_get_params
+    end
+
+   before '/fluid/*' do
+      @flex = true
+      use_get_params
+    end
+
+  before '/fixed/:width' do
+    @bodywidth = get_width(params[:width])
+  end
+
+  before 'fluid/:width' do
+    @bodywidth = get_width(params[:width])
   end
 
 #
@@ -42,6 +70,16 @@ class MailerApp < Sinatra::Application
 #
 
   get '/' do
+    erb :index
+  end
+
+  get '/fixed/:width' do
+    erb(premaul(erb( :premailer_payload)),{
+        layout: :styleguide_layout
+    })
+  end
+
+  get '/fluid/:width' do
     erb(premaul(erb( :premailer_payload)),{
         layout: :styleguide_layout
     })

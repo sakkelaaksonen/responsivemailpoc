@@ -3,11 +3,14 @@
 /* these styles are used for inlining. */
 img {border:0;}
 body {
-  max-width: 298px;
+  <% if @flex %>
+  max-width: <%=@bodywidth%>px;
+  <% else  %>
+    width: <%=@bodywidth%>px;
+  <% end %>
   color: #333;
   font-size: 14px;
-  line-height: 20px;
-  font-family: wf_segoe_ui, Tahoma, Arial, sans-serif;
+  line-height: 20px@b  font-family: wf_segoe_ui, Tahoma, Arial, sans-serif;
   background: #f2f2f2;
   font-weight: 300;
   margin: 0 auto !important;
