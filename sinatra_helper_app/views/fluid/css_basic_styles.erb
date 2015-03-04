@@ -3,7 +3,11 @@
 /* these styles are used for inlining. */
 img {border:0;}
 body {
-  max-width: 298px;
+  <% if @flex %>
+  max-width: <%=@bodywidth%>px;
+  <% else  %>
+    width: <%=@bodywidth%>px;
+  <% end %>
   color: #333;
   font-size: 14px;
   line-height: 20px;
@@ -170,7 +174,7 @@ table.bg-image-block {
   width: 100%;
 }
 
-table.bg-image-block .large-text{
+table.bg-image-block .large-text {
   font-family: Arial, Helvetica, sans-serif; font-weight: normal; text-decoration: none; color: #ffffff; font-size: 30px;
 }
 
