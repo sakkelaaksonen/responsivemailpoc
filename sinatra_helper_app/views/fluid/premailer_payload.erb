@@ -1,13 +1,18 @@
 <body>
-  <%= erb :css_basic_styles %>
+  <%= erb :'fluid/css_basic_styles' %>
   <div class="bg">
     <div class="preheader" style="font-size: 1px; display: none !important;">PREHEADER CODE HERE</div>
-    <a href="%%view_email_url%%" alias="WebCopy">If you have problems viewing this email, check out even more awesome web version</a>
     <table class="main" width="100%">
+      <tr>
+        <td>  <%= erb :'content/webview'%></td>
+      </tr>
+          <tr>
+        <td class="spacer"></td>
+      </tr>
       <tr>
         <td>
 
-          <%= erb :header %>
+          <%= erb :'fluid/header'%>
         </td>
       </tr>
       <tr>
@@ -17,7 +22,7 @@
         <td>
           
           <%=
-          erb :bg_image
+          erb :'content/bg_image'
           %>
           
         </td>
@@ -25,16 +30,7 @@
       <tr>
         <td class="spacer"></td>
       </tr>
-      <tr>
-        <td>
-          <%=
-          erb :three_small_boxes
-          %>
-          <%=
-          # erb :three_small_boxes
-          %>
-        </td>
-      </tr>
+     
       <tr>
         <td class="spacer"></td>
       </tr>
@@ -42,7 +38,7 @@
         <td>
           
           <%=
-          erb :highlight
+          erb :'content/highlight'
           %>
           
         </td>
@@ -63,7 +59,7 @@
       </tr>
       <tr>
         <td>
-          <%= erb :two_and_one_column %>
+          <%= erb :'content/two_and_one_column' %>
         </td>
       </tr>
       <!--
@@ -85,7 +81,7 @@
       <tr>
         <td>
           
-          <%= erb :footer %>
+          <%= erb :'fluid/footer' %>
         </td>
       </tr>
     </table>

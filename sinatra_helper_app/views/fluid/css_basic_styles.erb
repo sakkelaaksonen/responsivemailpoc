@@ -3,11 +3,7 @@
 /* these styles are used for inlining. */
 img {border:0;}
 body {
-  <% if @flex %>
-  max-width: <%=@bodywidth%>px;
-  <% else  %>
-    width: <%=@bodywidth%>px;
-  <% end %>
+  max-width: 640px;
   color: #333;
   font-size: 14px;
   line-height: 20px;
@@ -83,6 +79,15 @@ table.image-column-image a {
 table.image-column-image a img {
 }
 */
+
+.webview-table td {
+  width: 100%;
+  background: #fff;
+
+}
+.webview-table .padding-vertical {height:16px;}
+.webview-table .padding-horizontal {width: 16px;}
+
 td p {
   text-align: justify;
   margin:0;
