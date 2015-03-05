@@ -1,0 +1,202 @@
+module.exports =
+    [{
+    "gmail.com": "9959389"
+}, {
+    "nokiamail.com": "5990389"
+}, {
+    "hotmail.com": "5939650"
+}, {
+    "ovi.com": "4210680"
+}, {
+    "yahoo.com": "3010207"
+}, {
+    "qq.com": "1447975"
+}, {
+    "live.com": "990170"
+}, {
+    "mail.ru": "681411"
+}, {
+    "outlook.com": "467223"
+}, {
+    "163.com": "417950"
+}, {
+    "wp.pl": "185480"
+}, {
+    "126.com": "177212"
+}, {
+    "ymail.com": "160416"
+}, {
+    "yahoo.co.in": "153472"
+}, {
+    "seznam.cz": "126623"
+}, {
+    "yandex.ru": "125924"
+}, {
+    "yahoo.co.id": "123789"
+}, {
+    "rediffmail.com": "122959"
+}, {
+    "yahoo.com.br": "116051"
+}, {
+    "yahoo.in": "95405"
+}, {
+    "hotmail.es": "93503"
+}, {
+    "nokia.com": "87566"
+}, {
+    "hotmail.fr": "83785"
+}, {
+    "o2.pl": "71498"
+}, {
+    "yahoo.fr": "59395"
+}, {
+    "hotmail.co.uk": "57728"
+}, {
+    "msn.com": "56415"
+}, {
+    "bk.ru": "54361"
+}, {
+    "live.com.mx": "54110"
+}, {
+    "yahoo.com.mx": "53425"
+}, {
+    "yahoo.com.vn": "49685"
+}, {
+    "interia.pl": "49048"
+}, {
+    "yahoo.co.uk": "48127"
+}, {
+    "rocketmail.com": "47409"
+}, {
+    "yahoo.com.tw": "41463"
+}, {
+    "gmai.com": "38874"
+}, {
+    "email.com": "38637"
+}, {
+    "gmil.com": "36893"
+}, {
+    "hotmail.com.ar": "36138"
+}, {
+    "139.com": "35092"
+}, {
+    "yahoo.es": "34172"
+}, {
+    "live.fr": "34119"
+}, {
+    "list.ru": "32895"
+}, {
+    "windowslive.com": "32028"
+}, {
+    "abv.bg": "30693"
+}, {
+    "mail.com": "30136"
+}, {
+    "example.com": "29574"
+}, {
+    "inbox.ru": "27364"
+}, {
+    "facebook.com": "27137"
+}, {
+    "hotmail.co.th": "25969"
+}, {
+    "aol.com": "25720"
+}, {
+    "rambler.ru": "24566"
+}, {
+    "outlook.es": "23324"
+}, {
+    "ig.com.br": "23071"
+}, {
+    "bol.com.br": "22674"
+}, {
+    "sina.com": "21070"
+}, {
+    "sohu.com": "20906"
+}, {
+    "yahoo.com.ar": "20268"
+}, {
+    "live.cn": "18937"
+}, {
+    "hotmail.it": "18759"
+}, {
+    "gamil.com": "18212"
+}, {
+    "azet.sk": "17884"
+}, {
+    "hotmil.com": "17633"
+}, {
+    "outlook.fr": "17551"
+}, {
+    "telenet.be": "17446"
+}, {
+    "libero.it": "16747"
+}, {
+    "live.co.uk": "16495"
+}, {
+    "btinternet.com": "16349"
+}, {
+    "live.com.ar": "15090"
+}, {
+    "hotmai.com": "14594"
+}, {
+    "centrum.cz": "14481"
+}, {
+    "hotmail.com.br": "14058"
+}, {
+    "tlen.pl": "13949"
+}, {
+    "email.cz": "13286"
+}, {
+    "icloud.com": "12987"
+}, {
+    "luukku.com": "12785"
+}, {
+    "freemail.hu": "12763"
+}, {
+    "uol.com.br": "12565"
+}, {
+    "hotmail.con": "11439"
+}, {
+    "skynet.be": "11424"
+}, {
+    "inbox.lv": "10977"
+}, {
+    "live.in": "10409"
+}, {
+    "yahoo.com.cn": "10357"
+}, {
+    "foxmail.com": "10246"
+}, {
+    "ukr.net": "10044"
+}, {
+    "googlemail.com": "9969"
+}, {
+    "terra.com.br": "9833"
+}, {
+    "vip.qq.com": "9592"
+}, {
+    "me.com": "9572"
+}, {
+    "live.cl": "9329"
+}, {
+    "yahoo.it": "9207"
+}, {
+    "yeah.net": "9038"
+}, {
+    "hotmail.fi": "8835"
+}, {
+    "op.pl": "8657"
+}, {
+    "poczta.fm": "8621"
+}, {
+    "orange.fr": "8502"
+}, {
+    "kolumbus.fi": "8467"
+}, {
+    "webmail.co.za": "8368"
+}, {
+    "homail.com": "8357"
+}, {
+    "hotmal.com": "8056"
+}];

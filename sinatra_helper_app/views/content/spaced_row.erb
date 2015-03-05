@@ -1,12 +1,16 @@
+<%
+transparent ||= false
+
+%>
 <tr>
   
-  <td class="left-spacer">
+<!--   <td class="left-spacer">
     <%= erb :'content/onepixel'%>
-  </td>
-  <td>
+  </td> -->
+  <td class="<%='bg-white' unless transparent %>">
     <%= erb block.to_sym %>
   </td>
-  <td class="right-spacer">
+ <!--  <td class="right-spacer">
     <%= erb :'content/onepixel'%>
-  </td>
+  </td> -->
 </tr>
