@@ -20,7 +20,7 @@ class MailerApp < Sinatra::Application
 
   helpers do
 
-    def render_block(block_name,local_views=@local_views)
+    def render_block(block_name,local_views)
       erb( :'/content/spaced_row', { locals: {block: "#{local_views}/#{block_name}"} } )
     end
 
@@ -92,15 +92,10 @@ class MailerApp < Sinatra::Application
     @innerwidth = 298 # outer - 8 for spacing
     @zoomlevel = '1.1'
     post_maul(:fixed_narrow_body,"#{settings.views}/fixed")
-
-        # erb(premaul(erb( :fixed_narrow_body,{views: "#{settings.views}/fixed"})))
-
   end
 
   get '/fluid/:width' do
-    erb(premaul(erb( :premailer_payload)),{
-        layout: :styleguide_layout
-    })
+    post_maul(:premailer_payload,"#{settings.views}/fluid")
   end
 
 end #of Class MailerApp 
