@@ -1,10 +1,10 @@
-require 'blurred_image'
+require_relative '../lib/magick_tools.rb'
 require 'RMagick'
-include Magick
-
-TEST_FILE ='./spec/test.png'
-
+include MagickTools
+# 
 RSpec.describe BlurredImage  do
+  include Magick
+  include MagickTools
 
   context 'initialize new image' do
 
