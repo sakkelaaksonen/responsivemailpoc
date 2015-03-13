@@ -4,7 +4,7 @@ include Magick
 
 TEST_FILE ='./spec/test.png'
 
-RSpec.describe BlurredImage , "#initialize" do
+RSpec.describe BlurredImage  do
 
   context 'initialize new image' do
 
@@ -35,7 +35,38 @@ RSpec.describe BlurredImage , "#initialize" do
   end
 
 
+  context 'display' do
+    
+    it 'should raise error if blur_it is not run yet' do
+      b = BlurredImage.new(TEST_FILE)
+      expect(b.display ).to raise_error(EmptyError,'nothing to show. run blur_it first')
+    end
+    #dont know how to test this really...
+    it 'should return self' do
+      b = BlurredImage.new(TEST_FILE)
+      b.blur_it
+      expect(b.display).to eq(b)
+    end
+  end
+
   # context 'write to file' do
+
+  #   it 'raise error if filename is not *.gif' do
+  #     b = BlurredImage.new(TEST_FILE)
+  #     b.blur_it
+  #     expect(b.write('specced.aa')).to  raise_error(StandardError)
+  #   end
+
+  #   it 'raise error blur_it has not been run' do
+  #     b = BlurredImage.new(TEST_FILE)
+  #     expect(b.write('specced.gif')).to  raise_error(StandardError)
+  #   end
+
+  #   it 'should return self' do
+  #     b = BlurredImage.new(TEST_FILE)
+  #     b.blur_it
+  #     expect(b.write('specced.gif')).to eq(b)
+  #   end
 
   # end
 
