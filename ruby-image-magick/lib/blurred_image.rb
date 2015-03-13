@@ -14,7 +14,7 @@ include Magick
     attr_accessor :images
     attr_accessor :blur_steps
     attr_accessor :source
-
+    
     @images = []
     RADIUS = 3
     COEF = 3
