@@ -5,11 +5,13 @@ require 'time'
 include Magick
 
 
+## TODO:
+
+## TIMEZONE & LOCALE
+
 # img = ImageList.new("fitbit.jpg")
 # img.annotate
 # exit
-
-
 
 
 # Demonstrate the annotate method
@@ -29,7 +31,7 @@ end
 # Dir.glob(File.join('img','*.png'))
 # animated.inspect
 animated.background_color= 'white'
-animated.delay=180
+animated.delay= 180
 animated.write('phones.gif')
 # animated.average
 # animated.display
