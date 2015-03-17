@@ -98,9 +98,13 @@ class MailerApp < Sinatra::Application
     post_maul(:premailer_payload,"#{settings.views}/fluid")
   end
 
-
-  get '/giffed/welcome-a' do
-    erb :'giffed/welcome-a.html'
+  get %r{/giffed/welcome-([\w]+)} do
+  # get '/giffed/welcome-a' do
+    erb :"giffed/welcome-#{params[:captures].first}.html"
   end
+
+  # get '/giffed/welcome-a' do
+  #   erb :'giffed/welcome-a.html'
+  # end
 
 end #of Class MailerApp 
