@@ -99,6 +99,10 @@ class MailerApp < Sinatra::Application
   end
 
   get %r{/giffed/welcome-([\w]+)} do
+
+
+    
+
   # get '/giffed/welcome-a' do
     erb :"giffed/welcome-#{params[:captures].first}.html"
   end
