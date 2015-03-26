@@ -13,10 +13,12 @@ module MagickTools
     attr_accessor :source
 
     @images = []
-    RADIUS = 3
+    RADIUS = 2
     COEF = 3
-    BLUR_STEPS = 8
-    DELAY = 100
+    BLUR_STEPS = 20
+    DELAY = 50
+    # REPEAT_LAST = 10
+
 
     def initialize(image,blur_options={})
 
@@ -30,8 +32,9 @@ module MagickTools
       # end
 
       @source = image
-      @images = ImageList.new()
+      @images = ImageList.new() {}
       @images.delay = @delay
+      @images.iterations = 0
 
       return self
 
@@ -40,12 +43,20 @@ module MagickTools
 
     def blur_it
 
-      @blur_steps.times do |i|
+      (1..@blur_steps).to_a.reverse.each do |i|
+        # puts i 
         step_radius = (i / @radius)
+        # puts step_radius
         bl = Image.read(@source).first
-        bl = bl.gaussian_blur(step_radius,  @coef)
-        @images.push(bl)
+        bl = bl.gaussian_blur( step_radius ,  @coef )
+        @images.push( bl )
       end
+      
+      # REPEAT_LAST.times do 
+        last_img = Image.read(@source).first
+        last_img.delay = 3000
+        @images.push(last_img)
+      # end
 
       return self
 
